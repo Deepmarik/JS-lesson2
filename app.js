@@ -35,16 +35,6 @@
 let a = +prompt("Введите целое число, ");
 let b = +prompt("Введите целое число, ");
 let result;
-/*if (a && b >= 0) {
-    result = a - b;
-    alert(result);
-} else if (a && b < 0) {
-    result = a * b;
-    alert(result);
-} else if (a * b < 0) {
-    result = a + b;
-    alert(result);
-}*/
 function arithmetic_operations(a,b){
     if(a>0&b>0){
         result=a-b;
@@ -58,3 +48,29 @@ function arithmetic_operations(a,b){
             alert(result);
 }
 arithmetic_operations(a,b);
+/* Задание 4. Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
+Обязательно использовать оператор return.*/
+/**
+ * функции, выполняющие арифметические операции
+ */
+let c,d;
+function summ_numbers(c,d){
+    return(c+d);
+}
+result=summ_numbers(1,56)
+alert(result);
+function difference_numbers(c,d){
+    return(c-d);
+}
+result=difference_numbers(4,6);
+alert(result);
+function multiplication_numbers(c,d){
+    return(c*d);
+}
+result=multiplication_numbers(4,6);
+alert(result);
+function division_numbers(c,d){
+    return(c/d);
+}
+result=division_numbers(9,-8);
+alert(result);
