@@ -35,46 +35,76 @@
 let a = +prompt("Введите целое число, ");
 let b = +prompt("Введите целое число, ");
 let result;
-function arithmetic_operations(a,b){
-    if(a>0&b>0){
-        result=a-b;
-            }
-            else if(a<0&b<0){
-                result=a*b;
-            }
-            else if(a*b<0){
-                result=a*b;
-            }
-            alert(result);
+function arithmetic_operations(a, b) {
+    if (a > 0 & b > 0) {
+        result = a - b;
+    }
+    else if (a < 0 & b < 0) {
+        result = a * b;
+    }
+    else if (a * b < 0) {
+        result = a * b;
+    }
+    alert(result);
 }
-arithmetic_operations(a,b);
+arithmetic_operations(a, b);
+
 /* Задание 4. Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
 Обязательно использовать оператор return.*/
 /**
  * функции, выполняющие арифметические операции
  */
-let c,d;
-function summ_numbers(c,d){
-    return(c+d);
+let c, d;
+function summ_numbers(c, d) {
+    return (c + d);
 }
-result=summ_numbers(1,56)
+result = summ_numbers(1, 56)
 alert(result);
-function difference_numbers(c,d){
-    return(c-d);
+function difference_numbers(c, d) {
+    return (c - d);
 }
-result=difference_numbers(4,6);
+result = difference_numbers(4, 6);
 alert(result);
-function multiplication_numbers(c,d){
-    return(c*d);
+function multiplication_numbers(c, d) {
+    return (c * d);
 }
-result=multiplication_numbers(4,6);
+result = multiplication_numbers(4, 6);
 alert(result);
-function division_numbers(c,d){
-    return(c/d);
+function division_numbers(c, d) {
+    return (c / d);
 }
-result=division_numbers(9,-8);
+result = division_numbers(9, -8);
 alert(result);
+
 /*5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
 где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
 переданного значения операции (использовать switch) выполнить одну из арифметических операций
 (использовать функции из задания 4) и вернуть полученное значение.*/
+let arg1, arg2;
+//result=0;
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case summ_numbers:
+            result = summ_numbers(arg1, arg2);
+            alert(result);
+            return (result);
+            break;
+        case difference_numbers:
+            result = difference_numbers(arg1, arg2);
+            alert(result);
+            return (result);
+            break;
+        case multiplication_numbers:
+            result = multiplication_numbers(arg1, arg2);
+            alert(result);
+            return (result);
+            break;
+        case division_numbers:
+            result=difference_numbers(arg1, arg2);
+            alert(result);
+            return (result);
+            break;
+    }
+    alert(result)
+}
+mathOperation(4, 2, difference_numbers);
